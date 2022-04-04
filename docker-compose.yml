@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  php-fpm:
+    build:
+      context: ./
+    volumes:
+      - ./app:/var/www/app
+    networks:
+      - app-net
+
+#Docker Networks
+networks:
+  app-net:
+    driver: bridge

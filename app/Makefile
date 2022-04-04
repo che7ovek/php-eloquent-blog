@@ -7,7 +7,7 @@ console:
 	./vendor/bin/psysh
 
 install:
-	composer install
+	composer install --prefer-dist
 
 db-prepare:
 	php db-prepare.php
